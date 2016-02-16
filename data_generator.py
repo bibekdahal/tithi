@@ -29,6 +29,12 @@ if __name__ == "__main__":
 
         year += 1
 
+    database = {
+        "init_year": INIT_YEAR,
+        "end_year": END_YEAR,
+        "data": tithis
+    }
+
     # Write to json file
     with open(OUT_FILE, 'w') as file:
-        json.dump(tithis, file)
+        json.dump(database, file)
