@@ -3,7 +3,7 @@ tithi
 
 **tithi** is a web scraping python api for getting nepali tithi data from web pages. It obtains and stores tithi in unicode Devanagari strings.
 
-Currently, [http://www.nepalicalendar.com/](http://www.nepalicalendar.com/) is used to get the tithi data.
+Currently, [http://www.ashesh.com.np/nepali-calendar/](http://www.ashesh.com.np/nepali-calendar/) is used to get the tithi data.
 
 ## Dependencies
 
@@ -40,7 +40,7 @@ tithis = s.get_tithis()
 The tithi data are stored in a list of dictionaries, each containing a `date` and a `tithi` fields. Example of an item in the list is:
 
 ```python
-{ "date" : "2072-11-01", "tithi": "पञ्चमी" }
+{ "date" : "2072-11-01", "tithi": "पञ्चमी", "extra": "सरस्वती पुजा, वसन्तश्रावण, श्रीपञ्चमी" }
 ```
 
 
@@ -55,7 +55,7 @@ The format of the json database is as follows.
 	"init_year" : initial_year_in_this_database,
     "end_year" : final_year_in_this_database,
     "data" : [
-    	{ "date" : "YYYY-MM-DD", "tithi": tithi_for_this_day},
+    	{ "date" : "YYYY-MM-DD", "tithi": tithi_for_this_day, "extra", holiday_and_extra },
         ...
     ]
 }
